@@ -1,3 +1,5 @@
+import random
+
 def fill_increasing(size):
     array = []
     for i in range(size):
@@ -23,5 +25,13 @@ def fill_v_shape(size):
     return array
 
 
+def fill_random(size):
+    array = []
+    for i in range(size):
+        array.append(random.randint(0, 1000))
+    return array
+
+
+print(fill_random(100000))
 
 
