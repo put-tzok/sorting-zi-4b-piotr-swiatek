@@ -1,5 +1,3 @@
-import math
-
 def fill_increasing(size):
     array = []
     for i in range(size):
@@ -15,7 +13,7 @@ def fill_decreasing(size):
     return array
 
 
-def fill_vshape(size):
+def fill_v_shape(size):
     array = []
     second_starting_point = 1 if size % 2 == 0 else 0
     for i in range(size, 1, -2):
@@ -23,9 +21,6 @@ def fill_vshape(size):
     for i in range(second_starting_point, size, 2):
         array.append(i)
     return array
-
-
-print(fill_vshape(100))
 
 
 
