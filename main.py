@@ -1,37 +1,14 @@
-import random
+from generators.fill_increasing import fill_increasing
+from generators.fill_decreasing import fill_decreasing
+from generators.fill_v_shape import fill_v_shape
+from generators.fill_random import fill_random
 
-def fill_increasing(size):
-    array = []
-    for i in range(size):
-        array.append(i)
-    return array
-
-
-def fill_decreasing(size):
-    array = []
-    actual_size = size if size >= 0 else size * -1
-    for i in range(actual_size):
-        array.append(i * -1)
-    return array
+from algorithms.selection_sort import selection_sort
+from algorithms.insertion_sort import insertion_sort
 
 
-def fill_v_shape(size):
-    array = []
-    second_starting_point = 1 if size % 2 == 0 else 0
-    for i in range(size, 1, -2):
-        array.append(i)
-    for i in range(second_starting_point, size, 2):
-        array.append(i)
-    return array
 
 
-def fill_random(size):
-    array = []
-    for i in range(size):
-        array.append(random.randint(0, 1000))
-    return array
 
-
-print(fill_random(100000))
 
 
