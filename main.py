@@ -5,6 +5,11 @@ from generators.fill_random import fill_random
 
 from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
+from algorithms.heap_sort import heap_sort
+
+
+
+
 
 
 
