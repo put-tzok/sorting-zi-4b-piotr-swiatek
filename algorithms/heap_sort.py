@@ -13,9 +13,9 @@ def heapify(array, array_length, i):
         largest = right
 
     if largest != i:
-        arr = swap(array, i, largest)
+        array = swap(array, i, largest)
 
-        heapify(arr, array_length, largest)
+        heapify(array, array_length, largest)
 
 
 def heap_sort(array):

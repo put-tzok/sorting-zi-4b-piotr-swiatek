@@ -7,10 +7,7 @@ from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
 from algorithms.heap_sort import heap_sort
 
-
-
-
-
+print(heap_sort(fill_random(50)))
 
 
 
