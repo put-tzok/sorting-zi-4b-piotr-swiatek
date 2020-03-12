@@ -1,13 +1,8 @@
-from generators.fill_increasing import fill_increasing
-from generators.fill_decreasing import fill_decreasing
-from generators.fill_v_shape import fill_v_shape
-from generators.fill_random import fill_random
+from tests.execution_time_test import start_tests
 
-from algorithms.selection_sort import selection_sort
-from algorithms.insertion_sort import insertion_sort
-from algorithms.heap_sort import heap_sort
+start_tests(100)
 
-print(heap_sort(fill_random(50)))
+
 
 
 
