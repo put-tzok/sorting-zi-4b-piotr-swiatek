@@ -1,11 +1,3 @@
 from tests.execution_time_test import start_tests
 
-start_tests(100)
-
-
-
-
-
-
-
-
+start_tests(10000)

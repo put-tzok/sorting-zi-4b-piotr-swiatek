@@ -28,12 +28,12 @@ def partition(arr, start, stop):
         arr = swap(arr, i, j)
 
 
-def quick_sort(arr, start, stop):
+def quick_sort_random(arr, start, stop):
     if start < stop:
         pivot_index = partition_rand(arr, start, stop)
 
-        quick_sort(arr, start, pivot_index)
-        quick_sort(arr, pivot_index + 1, stop)
+        quick_sort_random(arr, start, pivot_index)
+        quick_sort_random(arr, pivot_index + 1, stop)
 
     return arr
 
