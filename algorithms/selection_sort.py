@@ -10,4 +10,4 @@ def selection_sort(array):
             if array[j] < array[min_index]:
                 min_index = j
         array = swap(array, i, min_index)
-    return array
+
