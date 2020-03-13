@@ -11,8 +11,6 @@ from algorithms.heap_sort import heap_sort
 from algorithms.quick_sort import quick_sort
 from algorithms.quick_sort_random import quick_sort_random
 
-ONE_SECOND = 1000
-
 
 def is_quick_sort(algorithm):
     return algorithm == quick_sort or algorithm == quick_sort_random

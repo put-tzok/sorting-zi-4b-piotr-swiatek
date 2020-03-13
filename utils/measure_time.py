@@ -1,4 +1,5 @@
 import time
+ONE_SECOND = 1000
 
 
 def measure_time(algorithm, test_set, is_quick_sort):
@@ -8,5 +9,5 @@ def measure_time(algorithm, test_set, is_quick_sort):
     else:
         algorithm(test_set)
     end_time = time.time()
-    return round((end_time - start_time) * 1000, 3)
+    return round((end_time - start_time) * ONE_SECOND, 3)
 
