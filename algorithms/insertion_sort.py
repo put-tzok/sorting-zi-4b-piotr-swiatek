@@ -1,3 +1,6 @@
+from utils.measure_time import measure_time
+
+
 def insertion_sort(array):
     array_length = len(array)
 
@@ -10,4 +13,9 @@ def insertion_sort(array):
             j -= 1
         array[j+1] = key
 
-    return array
+
+def test_insertion_sort(array):
+    # in order to not mutate array directly here copy of array is being made
+    array_copy = array
+    measure_time(insertion_sort, array_copy)
+

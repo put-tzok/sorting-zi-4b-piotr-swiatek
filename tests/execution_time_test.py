@@ -1,4 +1,4 @@
-import time
+from utils.measure_time import measure_time
 
 from generators.fill_increasing import fill_increasing
 from generators.fill_decreasing import fill_decreasing
@@ -14,6 +14,10 @@ from algorithms.quick_sort_random import quick_sort_random
 ONE_SECOND = 1000
 
 
+def is_quick_sort(algorithm):
+    return algorithm == quick_sort or algorithm == quick_sort_random
+
+
 def create_test_set(n):
     return {
         'increasing': fill_increasing(n),
@@ -24,13 +28,9 @@ def create_test_set(n):
 
 
 def test_execution_time(algorithm, test_set, test_set_name):
-    start_time = time.time()
-    if algorithm == quick_sort or algorithm == quick_sort_random:
-        algorithm(test_set, 0, len(test_set) - 1)
-    else:
-        algorithm(test_set)
-    end_time = time.time()
-    run_time = round((end_time - start_time) * 1000, 3)
+    # in order to not mutate array directly here copy of array is being made
+    test_set_copy = test_set
+    run_time = measure_time(algorithm, test_set_copy, is_quick_sort(algorithm))
     print('{} at {} test set took {} ms'.format(algorithm, test_set_name, run_time))
 
 

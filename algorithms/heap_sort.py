@@ -28,5 +28,3 @@ def heap_sort(array):
         array = swap(array, i, 0)
         heapify(array, i, 0)
 
-    return array
-

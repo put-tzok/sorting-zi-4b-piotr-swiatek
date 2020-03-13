@@ -21,4 +21,4 @@ def quick_sort(array, start, stop):
         quick_sort(array, start, pivot - 1)
         quick_sort(array, pivot + 1, stop)
 
-    return array
+
